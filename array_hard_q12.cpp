@@ -13,7 +13,7 @@ int func(vector<int> &nums)
         }
         if (suffix==0)
         {
-            suffix=0;
+            suffix=1;
         }
         prefix*=nums[i];
         suffix*=nums[n-i-1];
