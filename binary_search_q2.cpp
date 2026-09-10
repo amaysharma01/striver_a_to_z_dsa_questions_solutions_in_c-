@@ -12,11 +12,11 @@ int func(vector<int> &nums, int k)
         if (nums[mid]>=k)
         {
             index=mid;
-            right--;
+            right=mid-1;
         }
         else if (nums[mid]<k)
         {
-            left++;
+            left=mid+1;
         }
     }
     return index;
