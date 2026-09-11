@@ -8,16 +8,16 @@ int func(vector<int> &nums)
     while (left<=right)
     {
         int mid=left+(right-left)/2;
-        if (nums[left]<nums[mid])
-        {
-            right=mid-1;
-        }
-        else
+        if (nums[mid]>nums[right])
         {
             left=mid+1;
         }
+        else
+        {
+            right=mid;
+        }
     }
-    return left;
+    return nums[left];
 }
 int main()
 {
